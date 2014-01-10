@@ -1,5 +1,5 @@
 /***************************************************************************
- *         GModelSpectralGauss.cpp - Spectral Gauss model class            *
+ *         GModelSpectralGauss.cpp - Spectral Gaussian model class         *
  * ----------------------------------------------------------------------- *
  *  copyright (C) 2009-2013 by Juergen Knoedlseder                         *
  * ----------------------------------------------------------------------- *
@@ -20,8 +20,8 @@
  ***************************************************************************/
 /**
  * @file GModelSpectralGauss.cpp
- * @brief Gauss spectral model class implementation
- * @author Christoph Deil
+ * @brief Gaussian spectral model class implementation
+ * @author Christoph Deil & Ellis Owen
  */
 
 /* __ Includes ___________________________________________________________ */
@@ -30,14 +30,15 @@
 #endif
 #include "GException.hpp"
 #include "GTools.hpp"
+#include "GMath.hpp"
 #include "GModelSpectralGauss.hpp"
 #include "GModelSpectralRegistry.hpp"
 
 /* __ Constants __________________________________________________________ */
 
 /* __ Globals ____________________________________________________________ */
-const GModelSpectralGauss    g_spectral_const_seed;
-const GModelSpectralRegistry g_spectral_const_registry(&g_spectral_const_seed);
+const GModelSpectralGauss    g_spectral_gauss_seed;
+const GModelSpectralRegistry g_spectral_gauss_registry(&g_spectral_gauss_seed);
 
 /* __ Method name definitions ____________________________________________ */
 #define G_FLUX                "GModelSpectralGauss::flux(GEnergy&, GEnergy&)"
@@ -96,20 +97,27 @@ GModelSpectralGauss::GModelSpectralGauss(const GXmlElement& xml) :
 
 
 /***********************************************************************//**
- * @brief Value constructor
+ * @brief Constructor
  *
- * @param[in] value Model value (ph/cm2/s/MeV).
- *
- * Constructs constant spectral model by setting the model value.
+ * @param[in] prefactor Power law pre factor (in ph/cm2/s/MeV).
+ * @param[in] mean Mean energy.
+ * @param[in] sigma Energy width.
  ***************************************************************************/
-GModelSpectralGauss::GModelSpectralGauss(const double& value) :
-                     GModelSpectral()
+GModelSpectralGauss::GModelSpectralGauss(const double&  prefactor,
+                                         const GEnergy& mean,
+                                         const GEnergy& sigma) :
+                           GModelSpectral()
 {
     // Initialise members
     init_members();
 
-    // Set model value
-    m_norm.value(value);
+    // Set parameters
+    m_norm.value(prefactor);
+    m_mean.value(mean.MeV());
+    m_sigma.value(sigma.MeV());
+
+    // Autoscale parameters
+    autoscale();
 
     // Return
     return;
@@ -119,7 +127,7 @@ GModelSpectralGauss::GModelSpectralGauss(const double& value) :
 /***********************************************************************//**
  * @brief Copy constructor
  *
- * @param[in] model Spectral constant model.
+ * @param[in] model Spectral Gaussian model.
  ***************************************************************************/
 GModelSpectralGauss::GModelSpectralGauss(const GModelSpectralGauss& model) :
                      GModelSpectral(model)
@@ -157,8 +165,8 @@ GModelSpectralGauss::~GModelSpectralGauss(void)
 /***********************************************************************//**
  * @brief Assignment operator
  *
- * @param[in] model Constant spectral model.
- * @return Constant spectral model.
+ * @param[in] model Gauss spectral model.
+ * @return Gauss spectral model.
  ***************************************************************************/
 GModelSpectralGauss& GModelSpectralGauss::operator=(const GModelSpectralGauss& model)
 {
@@ -191,7 +199,7 @@ GModelSpectralGauss& GModelSpectralGauss::operator=(const GModelSpectralGauss& m
  ==========================================================================*/
 
 /***********************************************************************//**
- * @brief Clear constant spectral model
+ * @brief Clear Gaussian spectral model
  ***************************************************************************/
 void GModelSpectralGauss::clear(void)
 {
@@ -209,13 +217,13 @@ void GModelSpectralGauss::clear(void)
 
 
 /***********************************************************************//**
- * @brief Clone constant spectral model
+ * @brief Clone Gaussian spectral model
  *
- * @return Pointer to deep copy of constant spectral model.
+ * @return Pointer to deep copy of Gaussian spectral model.
  ***************************************************************************/
 GModelSpectralGauss* GModelSpectralGauss::clone(void) const
 {
-    // Clone constant spectral model
+    // Clone Gaussian spectral model
     return new GModelSpectralGauss(*this);
 }
 
@@ -229,19 +237,20 @@ GModelSpectralGauss* GModelSpectralGauss::clone(void) const
  *
  * Evaluates
  *
- * \f[
- *    S_{\rm E}(E | t) = {\tt m\_norm}
- * \f]
- *
- * where
- * \f${\tt m\_norm}\f$ is the normalization constant in units of 
- * ph/cm2/s/MeV.
+ * TODO: write formula
  ***************************************************************************/
 double GModelSpectralGauss::eval(const GEnergy& srcEng,
                                  const GTime&   srcTime) const
 {
+    double energy = srcEng.MeV();
+    double norm = m_norm.value();
+    double mean = m_mean.value();
+    double sigma = m_sigma.value();
+
     // Compute function value
-    double value = m_norm.value();
+    double term1 = (norm / sigma) * gammalib::inv_sqrt2pi;
+    double term2 = (energy - mean) * (energy - mean) / (2 * sigma * sigma);
+    double value = term1 * std::exp(- term2);
 
     // Return
     return value;
@@ -255,38 +264,14 @@ double GModelSpectralGauss::eval(const GEnergy& srcEng,
  * @param[in] srcTime True photon arrival time.
  * @return Model value (ph/cm2/s/MeV).
  *
- * Evaluates
- *
- * \f[
- *    S_{\rm E}(E | t) = {\tt m\_norm}
- * \f]
- *
- * where
- * \f${\tt m\_norm}\f$ is the normalization constant in units of 
- * ph/cm2/s/MeV.
- *
- * The method also evaluates the partial derivative of the model with respect
- * to the m_norm parameter using
- *
- * \f[
- *    \frac{\delta S_{\rm E}(E | t)}{\delta {\tt m\_norm}} = 1
- * \f]
+ * This method simply calls the eval() method as no analytical gradients will
+ * be computed. See the eval() method for details.
  ***************************************************************************/
 double GModelSpectralGauss::eval_gradients(const GEnergy& srcEng,
                                            const GTime&   srcTime)
 {
-    // Compute function value
-    double value = m_norm.value();
-
-    // Compute partial derivatives of the parameter values
-    double g_norm = (m_norm.is_free()) ? m_norm.scale() : 0.0;
-
-    // Set factor gradient (the parameter gradient is obtained by dividing
-    // the factor gradient by the scale factor)
-    m_norm.factor_gradient(g_norm);
-
     // Return
-    return value;
+    return eval(srcEng, srcTime);
 }
 
 
@@ -311,6 +296,7 @@ double GModelSpectralGauss::eval_gradients(const GEnergy& srcEng,
 double GModelSpectralGauss::flux(const GEnergy& emin,
                                  const GEnergy& emax) const
 {
+    // TODO: implement as in Gaussian::integral from Gaussian.cxx in the Fermi ScienceTools
     // Initialise flux
     double flux = 0.0;
     
@@ -348,6 +334,7 @@ double GModelSpectralGauss::flux(const GEnergy& emin,
 double GModelSpectralGauss::eflux(const GEnergy& emin,
                                   const GEnergy& emax) const
 {
+    // TODO Implement using numerical integration as in GModelSpectralExpPlaw::eflux
     // Initialise flux
     double eflux = 0.0;
     
@@ -394,6 +381,7 @@ GEnergy GModelSpectralGauss::mc(const GEnergy& emin,
               "Minimum energy < maximum energy required.");
     }
 
+    // TODO: implement
     // Allocate energy
     GEnergy energy;
 
@@ -411,50 +399,69 @@ GEnergy GModelSpectralGauss::mc(const GEnergy& emin,
 /***********************************************************************//**
  * @brief Read model from XML element
  *
- * @param[in] xml XML element containing power law model information.
+ * @param[in] xml XML element containing Gaussian model information.
  *
  * @exception GException::model_invalid_parnum
  *            Invalid number of model parameters found in XML element.
  * @exception GException::model_invalid_parnames
  *            Invalid model parameter name found in XML element.
  *
- * Reads the spectral information from an XML element having either the
- * format
+ * Read the spectral Gaussian information from an XML element.
+ * The format of the XML elements is:
  *
- *     <spectrum type="ConstantValue">
- *       <parameter name="Value" scale="1" min="0" max="1000" value="1" free="1"/>
+ *     <spectrum type="Gaussian">
+ *       <parameter name="Prefactor" scale=".." value=".." min=".." max=".." free=".."/>
+ *       <parameter name="Mean"      scale=".." value=".." min=".." max=".." free=".."/>
+ *       <parameter name="Sigma"     scale=".." value=".." min=".." max=".." free=".."/>
  *     </spectrum>
  *
- * or the format
- *
- *     <spectrum type="ConstantValue">
- *       <parameter name="Normalization" scale="1" min="0" max="1000" value="1" free="1"/>
- *     </spectrum>
  ***************************************************************************/
 void GModelSpectralGauss::read(const GXmlElement& xml)
 {
-    // Verify that XML element has exactly 1 parameter
-    if (xml.elements() != 1 || xml.elements("parameter") != 1) {
-        throw GException::model_invalid_parnum(G_READ, xml,
-              "Spectral constant requires exactly 1 parameter.");
-    }
+  const int n_pars = 3;
 
-    // Get parameter element
-    const GXmlElement* par = xml.element("parameter", 0);
+  // Verify that XML element has exactly 3 parameters
+  if (xml.elements() != n_pars || xml.elements("parameter") != n_pars) {
+      throw GException::model_invalid_parnum(G_READ, xml,
+            "Gaussian model requires exactly 3 parameters.");
+  }
 
-    // Get value
-    if (par->attribute("name") == "Normalization" ||
-        par->attribute("name") == "Value") {
-        m_norm.read(*par);
-    }
-    else {
-        throw GException::model_invalid_parnames(G_READ, xml,
-                          "Spectral constant requires either"
-                          " \"Normalization\" or \"Value\" parameter.");
-    }
+  // Extract model parameters
+  int npar[] = {0, 0, 0};
+  for (int i = 0; i < n_pars; ++i) {
 
-    // Return
-    return;
+      // Get parameter element
+      const GXmlElement* par = xml.element("parameter", i);
+
+      // Handle prefactor
+      if (par->attribute("name") == "Prefactor") {
+          m_norm.read(*par);
+          npar[0]++;
+      }
+
+      // Handle mean
+      else if (par->attribute("name") == "Mean") {
+          m_mean.read(*par);
+          npar[1]++;
+      }
+
+      // Handle sigma
+      else if (par->attribute("name") == "Sigma") {
+          m_sigma.read(*par);
+          npar[2]++;
+      }
+
+  } // endfor: looped over all parameters
+
+  // Verify that all parameters were found
+  if (npar[0] != 1 || npar[1] != 1 || npar[2] != 1) {
+      throw GException::model_invalid_parnames(G_READ, xml,
+            "Require \"Prefactor\", \"Mean\", and \"Sigma\""
+            " parameters.");
+  }
+
+  // Return
+  return;
 }
 
 
@@ -478,6 +485,8 @@ void GModelSpectralGauss::read(const GXmlElement& xml)
  ***************************************************************************/
 void GModelSpectralGauss::write(GXmlElement& xml) const
 {
+    // TODO: implement as in GModelSpectralExpPlaw::write
+
     // Set model type
     if (xml.attribute("type") == "") {
         xml.attribute("type", "ConstantValue");
