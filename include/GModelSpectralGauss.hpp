@@ -33,6 +33,7 @@
 #include "GModelSpectral.hpp"
 #include "GEnergy.hpp"
 #include "GXmlElement.hpp"
+#include "GFunction.hpp"
 
 
 /***********************************************************************//**
@@ -96,11 +97,29 @@ public:
     GEnergy sigma(void) const;
     void    sigma(const GEnergy& sigma);
 
+
+
 protected:
     // Protected methods
     void init_members(void);
     void copy_members(const GModelSpectralGauss& model);
     void free_members(void);
+
+    // Energy flux integration kernel
+    class eflux_kernel : public GFunction {
+    public:
+        eflux_kernel(const double& norm,
+                     const double& mean,
+                     const double& sigma) :
+                     m_norm(norm),
+                     m_mean(mean),
+                     m_sigma(sigma) {}
+        double eval(const double& eng);
+    protected:
+        const double& m_norm;      //!< Normalization
+        const double& m_mean;      //!< Mean
+        const double& m_sigma;     //!< Sigma
+    };
 
     // Protected members
     GModelPar m_norm;  //!< Normalization factor

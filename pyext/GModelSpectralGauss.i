@@ -1,5 +1,5 @@
 /***************************************************************************
- *          GModelSpectralConst.i - Spectral constant model class          *
+ *          GModelSpectralGauss.i - Spectral gaussian model class          *
  * ----------------------------------------------------------------------- *
  *  copyright (C) 2011-2013 by Juergen Knoedlseder                         *
  * ----------------------------------------------------------------------- *
@@ -19,34 +19,37 @@
  *                                                                         *
  ***************************************************************************/
 /**
- * @file GModelSpectralConst.i
+ * @file GModelSpectralGauss.i
  * @brief Spectral constant model class interface definition
- * @author Juergen Knoedlseder
+ * @author Ellis Owen, Christoph Deil
  */
 %{
 /* Put headers and other declarations here that are needed for compilation */
-#include "GModelSpectralConst.hpp"
+#include "GModelSpectralGauss.hpp"
 #include "GTools.hpp"
+#include "GEnergy.hpp"
 %}
 
 
 /***********************************************************************//**
- * @class GModelSpectralConst
+ * @class GModelSpectralGauss
  *
- * @brief Spectral constant model class
+ * @brief Spectral gaussian model class
  ***************************************************************************/
-class GModelSpectralConst : public GModelSpectral {
+class GModelSpectralGauss : public GModelSpectral {
 public:
     // Constructors and destructors
-    GModelSpectralConst(void);
-    explicit GModelSpectralConst(const GXmlElement& xml);
-    explicit GModelSpectralConst(const double& value);
-    GModelSpectralConst(const GModelSpectralConst& model);
-    virtual ~GModelSpectralConst(void);
+    GModelSpectralGauss(void);
+    explicit GModelSpectralGauss(const GXmlElement& xml);
+    explicit GModelSpectralGauss(const double&  prefactor,
+                                 const GEnergy& mean,
+                                 const GEnergy& sigma);
+    GModelSpectralGauss(const GModelSpectralGauss& model);
+    virtual ~GModelSpectralGauss(void);
 
     // Implemented pure virtual base class methods
     virtual void                 clear(void);
-    virtual GModelSpectralConst* clone(void) const;
+    virtual GModelSpectralGauss* clone(void) const;
     virtual std::string          type(void) const;
     virtual double               eval(const GEnergy& srcEng,
                                       const GTime& srcTime) const;
@@ -62,16 +65,20 @@ public:
     virtual void                 write(GXmlElement& xml) const;
 
     // Other methods
-    double value(void) const;
-    void   value(const double& value);
+    double  prefactor(void) const;
+    void    prefactor(const double& prefactor);
+    GEnergy mean(void) const;
+    void    mean(const GEnergy& mean);
+    GEnergy sigma(void) const;
+    void    sigma(const GEnergy& sigma);
 };
 
 
 /***********************************************************************//**
- * @brief GModelSpectralConst class extension
+ * @brief GModelSpectralGauss class extension
  ***************************************************************************/
-%extend GModelSpectralConst {
-    GModelSpectralConst copy() {
+%extend GModelSpectralGauss {
+    GModelSpectralGauss copy() {
         return (*self);
     }
 };

@@ -33,6 +33,8 @@
 #include "GMath.hpp"
 #include "GModelSpectralGauss.hpp"
 #include "GModelSpectralRegistry.hpp"
+#include "GFunction.hpp"
+#include "GIntegral.hpp"
 
 /* __ Constants __________________________________________________________ */
 
@@ -237,7 +239,9 @@ GModelSpectralGauss* GModelSpectralGauss::clone(void) const
  *
  * Evaluates
  *
- * TODO: write formula
+ * \f[
+ * \frac{dN}{dE}=\frac{\norm}{\sqrt{2\pi}\sigma}\exp(\frac{(E-\bar{E})^2}{2\sigma^2})
+ * \f]
  ***************************************************************************/
 double GModelSpectralGauss::eval(const GEnergy& srcEng,
                                  const GTime&   srcTime) const
@@ -296,7 +300,7 @@ double GModelSpectralGauss::eval_gradients(const GEnergy& srcEng,
 double GModelSpectralGauss::flux(const GEnergy& emin,
                                  const GEnergy& emax) const
 {
-    // TODO: implement as in Gaussian::integral from Gaussian.cxx in the Fermi ScienceTools
+    // **TODO: implement as in Gaussian::integral from Gaussian.cxx in the Fermi ScienceTools - can't locate this file...
     // Initialise flux
     double flux = 0.0;
     
@@ -334,19 +338,26 @@ double GModelSpectralGauss::flux(const GEnergy& emin,
 double GModelSpectralGauss::eflux(const GEnergy& emin,
                                   const GEnergy& emax) const
 {
-    // TODO Implement using numerical integration as in GModelSpectralExpPlaw::eflux
     // Initialise flux
     double eflux = 0.0;
     
     // Compute only if integration range is valid
     if (emin < emax) {
 
-        // Compute flux for a constant model
-        eflux = m_norm.value() * 0.5 * (emax.MeV()*emax.MeV() - 
-                                        emin.MeV()*emin.MeV());
+    	// Setup integration kernel
+    	eflux_kernel integrand(m_norm.value(),  m_mean.value(),
+    	                       m_sigma.value());
+    	GIntegral integral(&integrand);
 
-        // Convert from MeV/cm2/s to erg/cm2/s
-        eflux *= gammalib::MeV2erg;
+    	// Get integration boundaries in MeV
+    	double e_min = emin.MeV();
+    	double e_max = emax.MeV();
+
+    	// Perform integration
+    	eflux = integral.romb(e_min, e_max);
+
+    	// Convert from MeV/cm2/s to erg/cm2/s
+    	eflux *= gammalib::MeV2erg;
     
     } // endif: integration range was valid
 
@@ -485,7 +496,7 @@ void GModelSpectralGauss::read(const GXmlElement& xml)
  ***************************************************************************/
 void GModelSpectralGauss::write(GXmlElement& xml) const
 {
-    // TODO: implement as in GModelSpectralExpPlaw::write
+    // **TODO: implement as in GModelSpectralExpPlaw::write
 
     // Set model type
     if (xml.attribute("type") == "") {
@@ -515,7 +526,7 @@ void GModelSpectralGauss::write(GXmlElement& xml) const
     // Get parameter element
     GXmlElement* par = xml.element("parameter", 0);
 
-    // Set parameyter
+    // Set parameter
     if (par->attribute("name") == "Normalization" ||
         par->attribute("name") == "Value") {
         m_norm.write(*par);
@@ -573,19 +584,44 @@ std::string GModelSpectralGauss::print(const GChatter& chatter) const
  ***************************************************************************/
 void GModelSpectralGauss::init_members(void)
 {
-    // Initialise constant normalisation
+    // Initialise normalisation
     m_norm.clear();
-    m_norm.name("Value");
+    m_norm.name("Prefactor");
+    m_norm.unit("ph/cm2/s/MeV");
     m_norm.scale(1.0);
-    m_norm.value(1.0);         // default: 1.0
-    m_norm.range(0.0, 1000.0); // range:   [0, 1000]
+    m_norm.value(1.0);          // default: 1.0
+    m_norm.min(0.0);            // min:     0.0
     m_norm.free();
     m_norm.gradient(0.0);
-    m_norm.has_grad(true);
+    m_norm.has_grad(false);
+
+    // Initialise mean energy
+    m_mean.clear();
+    m_mean.name("Mean");
+    m_mean.unit("MeV");
+    m_mean.scale(1.0);
+    m_mean.value(1000.0);       // default: 1000.0
+    m_mean.min(0.1);            // min:     0.1
+    m_mean.free();
+    m_mean.gradient(0.0);
+    m_mean.has_grad(false);
+
+    // Initialise energy width
+    m_sigma.clear();
+    m_sigma.name("Sigma");
+    m_sigma.unit("MeV");
+    m_sigma.scale(1.0);
+    m_sigma.value(1000.0);       // default: 1000.0
+    m_sigma.min(0.1);            // min:     0.1
+    m_sigma.free();
+    m_sigma.gradient(0.0);
+    m_sigma.has_grad(false);
 
     // Set parameter pointer(s)
     m_pars.clear();
     m_pars.push_back(&m_norm);
+    m_pars.push_back(&m_mean);
+    m_pars.push_back(&m_sigma);
 
     // Return
     return;
@@ -601,10 +637,14 @@ void GModelSpectralGauss::copy_members(const GModelSpectralGauss& model)
 {
     // Copy members
     m_norm = model.m_norm;
+    m_mean = model.m_mean;
+    m_sigma = model.m_sigma;
 
     // Set parameter pointer(s)
     m_pars.clear();
     m_pars.push_back(&m_norm);
+    m_pars.push_back(&m_mean);
+    m_pars.push_back(&m_sigma);
 
     // Return
     return;
@@ -618,4 +658,20 @@ void GModelSpectralGauss::free_members(void)
 {
     // Return
     return;
+}
+
+/***********************************************************************//**
+ * @brief Kernel for energy flux integration
+ *
+ * @param[in] energy Energy (MeV).
+ ***************************************************************************/
+double GModelSpectralGauss::eflux_kernel::eval(const double& energy)
+{
+    // Evaluate function value
+    double term1 = (m_norm / m_sigma) * gammalib::inv_sqrt2pi;
+    double term2 = (energy - m_mean) * (energy - m_mean) / (2 * m_sigma * m_sigma);
+    double value = term1 * std::exp(- term2);
+
+    // Return value
+    return value;
 }
