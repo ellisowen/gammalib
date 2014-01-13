@@ -1,15 +1,19 @@
 import gammalib
 
-def test_a():
+def test_eval():
     model = gammalib.GModelSpectralGauss()
-    energy = gammalib.GEnergy(1, "TeV")
+    energy = gammalib.GEnergy(42, "MeV")
     time = gammalib.GTime()
     print(model.eval(energy, time))
     
 def test_mc():
-    gammalib.GModelSpectralGauss.mc
-    pass
-
+    model = gammalib.GModelSpectralGauss()
+    emin = gammalib.GEnergy(1, "MeV")
+    emax = gammalib.GEnergy(3, "MeV")
+    time = gammalib.GTime()
+    ran = gammalib.GRan()
+    print(model.mc(emin, emax, time, ran))
+    
 def test_write():
     gammalib.GModelSpectralGauss.write
     pass
@@ -20,4 +24,6 @@ def test_flux():
 
 
 if __name__ == '__main__':
-    test_a()
+    test_eval()
+    test_mc()
+    
