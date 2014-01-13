@@ -83,6 +83,7 @@ public:
                                        const GEnergy& emax) const;
     virtual GEnergy              mc(const GEnergy& emin,
                                     const GEnergy& emax,
+                                    const GTime&   time,
                                     GRan&          ran) const;
     virtual void                 read(const GXmlElement& xml);
     virtual void                 write(GXmlElement& xml) const;

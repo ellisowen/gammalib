@@ -398,12 +398,12 @@ double GModelSpectralGauss::eflux(const GEnergy& emin,
  ***************************************************************************/
 GEnergy GModelSpectralGauss::mc(const GEnergy& emin,
                                 const GEnergy& emax,
+                                const GTime&   time,
                                 GRan&          ran) const
 {
 	double xmax = emax.MeV();
 	double xmin = emin.MeV();
 	double energy;
-
 
     // Throw an exception if energy range is invalid
     if (xmin >= xmax) {
