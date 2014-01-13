@@ -138,7 +138,7 @@ protected:
 inline
 std::string GModelSpectralGauss::type(void) const
 {
-    return "Gauss";
+    return "Gaussian";
 }
 
 

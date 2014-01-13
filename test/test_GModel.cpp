@@ -82,6 +82,7 @@ void TestGModel::set(void)
 
     // Append spectral model tests
     append(static_cast<pfunction>(&TestGModel::test_const), "Test GModelSpectralConst");
+    append(static_cast<pfunction>(&TestGModel::test_gauss), "Test GModelSpectralGauss");
     append(static_cast<pfunction>(&TestGModel::test_plaw), "Test GModelSpectralPlaw");
     append(static_cast<pfunction>(&TestGModel::test_plaw2), "Test GModelSpectralPlaw2");
     append(static_cast<pfunction>(&TestGModel::test_eplaw), "Test GModelSpectralExpPlaw");
@@ -1194,8 +1195,8 @@ void TestGModel::test_gauss(void)
         test_value(model.size(), 3);
         test_assert(model.type() == "Gaussian", "Expected \"Gaussian\"");
         test_value(model.prefactor(), 5.7e-16);
-        test_value(model.mean().TeV(), 0.3);
-        test_value(model.sigma().TeV(), 1.0);
+        test_value(model.mean().MeV(), 2.48e6);
+        test_value(model.sigma().MeV(), 1e6);
 
         // Test prefactor method
         model.prefactor(2.3e-16);
@@ -1206,8 +1207,8 @@ void TestGModel::test_gauss(void)
         test_value(model.mean().MeV(), 96.0);
 
         // Test sigma method
-        model.sigma(GEnergy(0.5, "keV"));
-        test_value(model.sigma().keV(), 0.5);
+        model.sigma(GEnergy(0.5e7, "keV"));
+        test_value(model.sigma().keV(), 0.5e7);
 
         // Test operator access
         const char* strarray[] = {"Prefactor", "Mean", "Sigma"};

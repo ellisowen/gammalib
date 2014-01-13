@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuites name="GammaLib">
+  <testsuite disabled="" errors="1" failures="1" hostname="" id="0" name="GModel" package="" skipped="" tests="670" time="0.807704" timestamp="1389635141">
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test parameter constructor: Test if 47 is within 47 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test parameter constructor: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test parameter constructor: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test parameter constructor: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test parameter constructor: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test parameter constructor: Parameter shall have no minimum." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test parameter constructor: Parameter shall have no maximum." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test parameter constructor: Parameter shall have no range." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test parameter constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Test if 94.02 is within 94.02 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Test if 4.006 is within 4.006 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Test if 102 is within 102 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Test if 47.01 is within 47.01 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Test if 2.003 is within 2.003 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Test if 51 is within 51 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Test if 2 is within 2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Parameter name" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Parameter unit" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Parameter freezing" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Parameter printing" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Test if 9.42 is within 9.42 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Test if 3.14 is within 3.14 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Parameter name" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Parameter freezing" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor: Parameter printing" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test invalid parameter constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (1/4): Parameter shall have no minimum." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (1/4): Parameter shall have no maximum." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (1/4): Parameter shall have no range." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (1/4): Parameter shall have minimum." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (1/4): Parameter shall have no maximum." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (1/4): Parameter shall have no range." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (1/4): Parameter shall have minimum." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (1/4): Parameter shall have maximum." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (1/4): Parameter shall have range." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (1/4)" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (2/4)" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (3/4)" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test boundary handling (4/4)" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar: Test rescaling" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelPar" status="" time="0.000440869" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSky: Test type constructor: Model type "My type" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test type constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Test if 6 is 6" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSky: Test XML constructor, value and gradients: Expected source name "1FGL J0005.7+3815"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Expected no instruments" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Expected no observation identifiers" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSky: Test XML constructor, value and gradients: Expected "PointSource"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Expected spatial component" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Expected spectral component" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Expected temporal component" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Test if 1.73e-07 is within 1.73e-07 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Test if 1e-07 is within 1e-07 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSky" status="" time="0.000301365" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialPointSource: Test void constructor: Model type "SkyDirFunction" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test sky direction constructor: Test if 83.6331 is within 83.6331 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test sky direction constructor: Test if 22.0145 is within 22.0145 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test sky direction constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test value constructor: Test if 83.6331 is within 83.6331 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test value constructor: Test if 22.0145 is within 22.0145 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients: Test if 2 is 2" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialPointSource: Test XML constructor, value and gradients: Expected "SkyDirFunction"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients: Test if 83.6331 is within 83.6331 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients: Test if 22.0145 is within 22.0145 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialPointSource" status="" time="0.00025102" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialRadialDisk: Test void constructor: Model type "DiskFunction" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test value constructor: Test if 83.6331 is within 83.6331 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test value constructor: Test if 22.0145 is within 22.0145 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test value constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 3 is 3" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Expected "DiskFunction"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 83.6331 is within 83.6331 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 22.0145 is within 22.0145 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 0.45 is within 0.45 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 100 is within 100 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test sky direction" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialDisk" status="" time="0.000391166" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialRadialGauss: Test void constructor: Model type "GaussFunction" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test value constructor: Test if 83.6331 is within 83.6331 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test value constructor: Test if 22.0145 is within 22.0145 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test value constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 3 is 3" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Expected "GaussFunction"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 83.6331 is within 83.6331 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 22.0145 is within 22.0145 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 0.2 is within 0.2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 100 is within 100 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test sky direction" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialGauss" status="" time="0.000367763" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialRadialShell: Test void constructor: Model type "ShellFunction" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test value constructor: Test if 83.6331 is within 83.6331 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test value constructor: Test if 22.0145 is within 22.0145 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test value constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test value constructor: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 4 is 4" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Expected "ShellFunction"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 83.6331 is within 83.6331 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 22.0145 is within 22.0145 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 0.3 is within 0.3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 0.1 is within 0.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 100 is within 100 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test sky direction" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell: Test XML constructor, value and gradients" status="" time="0" />T
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialRadialShell" status="" time="0.000430647" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialEllipticalDisk: Test void constructor: Model type "EllipticalDisk" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test value constructor: Test if 83.6331 is within 83.6331 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test value constructor: Test if 22.0145 is within 22.0145 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test value constructor: Test if 45 is within 45 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test value constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test value constructor: Test if 2 is within 2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 5 is 5" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Expected "EllipticalDisk"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 83.6331 is within 83.6331 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 22.0145 is within 22.0145 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 45 is within 45 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 2 is within 2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 0.5 is within 0.5 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 100 is within 100 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test sky direction" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialEllipticalDisk" status="" time="0.000511468" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseConst: Test void constructor: Model type "ConstantValue" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test value constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test XML constructor, value and gradients: Test if 1 is 1" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseConst: Test XML constructor, value and gradients: Expected "ConstantValue"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test XML constructor, value and gradients: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test XML constructor, value and gradients: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test XML constructor, value and gradients: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseConst" status="" time="0.000210253" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseCube: Test void constructor: Model type "MapCubeFunction" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseCube: Test void constructor: Model filename "" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test filename value constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseCube: Test filename value constructor: Expected "data/test_cube.fits"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test filename value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test skymap value constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseCube: Test skymap value constructor: Expected ""' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test skymap value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Test if 1 is 1" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Expected "MapCubeFunction"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Model filename "data/test_cube.fits" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Model filename "Help me!" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Test if 3072 is 3072" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseCube" status="" time="0.134751" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseMap: Test void constructor: Model type "SpatialMap" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseMap: Test void constructor: Model filename "" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test filename value constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseMap: Test filename value constructor: Expected "data/cena_lobes_parkes.fits"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test filename value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test skymap value constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseMap: Test skymap value constructor: Expected ""' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test skymap value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Test if 1 is 1" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Expected "SpatialMap"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Model filename "data/cena_lobes_parkes.fits" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Model filename "data/cena_lobes_parkes.fits" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Test if 3072 is 3072" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Test if 0 is within 0 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpatialDiffuseMap" status="" time="0.197037" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spatial model XML I/O" status="" time="0.422352" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralConst: Test void constructor: Model type "ConstantValue" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralConst: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralConst: Test value constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralConst: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralConst: Test XML constructor, value and gradients: Test if 1 is 1" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralConst: Test XML constructor, value and gradients: Expected "ConstantValue"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralConst: Test XML constructor, value and gradients: Test if 5.7e-16 is within 5.7e-16 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralConst: Test XML constructor, value and gradients: Test if 3.9e-16 is within 3.9e-16 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralConst: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralConst: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralConst: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralConst: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralConst" status="" time="0.000154559" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralGauss: Test void constructor: Model type "Gaussian" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test value constructor: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test value constructor: Test if 42 is within 42 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test value constructor: Test if 0.5 is within 0.5 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test XML constructor, value and gradients: Test if 3 is 3" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralGauss: Test XML constructor, value and gradients: Expected "Gaussian"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test XML constructor, value and gradients: Test if 5.7e-16 is within 5.7e-16 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test XML constructor, value and gradients: Test if 2.48 is within 2.48e+06 +/- 1e-10" status="" time="0">
+      <failure message="Value 2.48 not within 2.48e+06 +/- 1e-10 (value-expected = -2.48e+06)." type="" />
+    </testcase>
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test XML constructor, value and gradients: Test if 1e+06 is within 1e+06 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test XML constructor, value and gradients: Test if 2.3e-16 is within 2.3e-16 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test XML constructor, value and gradients: Test if 96 is within 96 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss: Test XML constructor, value and gradients" status="" time="0">
+      <error message="*** ERROR in GOptimizerPar::factor_value(double&): Invalid argument.
+Specified value factor 0.005 is smaller than the minimum boundary 0.01." type="N10GException16invalid_argumentE" />
+    </testcase>
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralGauss" status="" time="0.000223698" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralPlaw: Test void constructor: Model type "PowerLaw" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test value constructor: Test if 2 is within 2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test value constructor: Test if -2.1 is within -2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test value constructor: Test if 100 is within 100 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 3 is 3" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralPlaw: Test XML constructor, value and gradients: Expected "PowerLaw"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 5.7e-16 is within 5.7e-16 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if -2.48 is within -2.48 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 0.3 is within 0.3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw" status="" time="0.000268822" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralPlaw2: Test void constructor: Model type "PowerLaw2" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test value constructor: Test if 2 is within 2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test value constructor: Test if -2.1 is within -2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test value constructor: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test value constructor: Test if 100 is within 100 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 4 is 4" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Expected "PowerLaw2"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 1e-07 is within 1e-07 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if -2 is within -2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 100 is within 100 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 500000 is within 500000 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 2.1e-07 is within 2.1e-07 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if -2.3 is within -2.3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralPlaw2" status="" time="0.000338852" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralExpPlaw: Test void constructor: Model type "ExpCutoff" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test value constructor: Test if 2 is within 2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test value constructor: Test if -2.1 is within -2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test value constructor: Test if 100 is within 100 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test value constructor: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 4 is 4" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Expected "ExpCutoff"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 5.7e-16 is within 5.7e-16 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if -2.48 is within -2.48 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 0.3 is within 0.3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 2.3e-16 is within 2.3e-16 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if -2.6 is within -2.6 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 0.5 is within 0.5 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralExpPlaw" status="" time="0.000334089" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralBrokenPlaw: Test void constructor: Model type "BrokenPowerLaw" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test value constructor: Test if 2 is within 2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test value constructor: Test if -2.1 is within -2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test value constructor: Test if 100 is within 100 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test value constructor: Test if -2.8 is within -2.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 4 is 4" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Expected "BrokenPowerLaw"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 5.7e-16 is within 5.7e-16 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if -2.48 is within -2.48 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 0.3 is within 0.3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if -2.7 is within -2.7 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 2.3e-16 is within 2.3e-16 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if -2.6 is within -2.6 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 0.5 is within 0.5 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if -3.6 is within -3.6 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralBrokenPlaw" status="" time="0.000335268" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralLogParabola: Test void constructor: Model type "LogParabola" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test value constructor: Test if 2 is within 2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test value constructor: Test if -2.1 is within -2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test value constructor: Test if 100 is within 100 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test value constructor: Test if -0.2 is within -0.2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 4 is 4" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Expected "LogParabola"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 5.878e-17 is within 5.878e-16 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if -2.32473 is within -2.32473 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if -0.074 is within -0.074 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 2.3e-16 is within 2.3e-16 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if -2.6 is within -2.6 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 0.5 is within 0.5 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if -0.1 is within -0.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralLogParabola" status="" time="0.000352963" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralNodes: Test void constructor: Model type "NodeFunction" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 0 is 0" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 0 is 0" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 2 is 2" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is 1" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 4 is 4" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 2 is 2" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 0.1 is within 0.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 2 is 2" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is 1" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 0.1 is within 0.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 4 is 4" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 2 is 2" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 0.1 is within 0.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 8 is 8" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 4 is 4" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 0.1 is within 0.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation: Test if 0.1 is within 0.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test node function manimulation" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 4 is 4" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 2 is 2" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralNodes: Test XML constructor, value and gradients: Expected "NodeFunction"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 10 is within 10 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 1e-07 is within 1e-07 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 1e-08 is within 1e-08 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 0.1 is within 0.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 2e-07 is within 2e-07 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralNodes" status="" time="0.00058382" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralFunc: Test void constructor: Model type "FileFunction" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralFunc: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralFunc: Test value constructor: Expected "data/filefunction.txt"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralFunc: Test value constructor: Test if 2 is within 2 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralFunc: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralFunc: Test XML constructor, value and gradients: Test if 1 is 1" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralFunc: Test XML constructor, value and gradients: Expected "FileFunction"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralFunc: Test XML constructor, value and gradients: Expected "data/filefunction.txt"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralFunc: Test XML constructor, value and gradients: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModelSpectralFunc: Test XML constructor, value and gradients: Expected "data/filefunction.txt"' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralFunc: Test XML constructor, value and gradients: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralFunc: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralFunc: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralFunc: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralFunc: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelSpectralFunc" status="" time="0.000865099" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O: Test saving and reloading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test spectral model XML I/O" status="" time="0.00777958" />
+    <testcase assertions="" classname="GModel" name='Test GModelTemporalConst: Test void constructor: Model type "Constant" expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelTemporalConst: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelTemporalConst: Test value constructor: Test if 3 is within 3 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelTemporalConst: Test value constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelTemporalConst: Test XML constructor, value and gradients: Test if 3.9 is within 3.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelTemporalConst: Test XML constructor, value and gradients: Test if 2.1 is within 2.1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelTemporalConst: Test XML constructor, value and gradients: Test if 1.9 is within 1.9 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelTemporalConst: Test XML constructor, value and gradients: Test if 0.8 is within 0.8 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelTemporalConst: Test XML constructor, value and gradients" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModelTemporalConst" status="" time="6.8287e-05" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test void constructor: Model container not empty." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test void constructor: Test if 0 is 0" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test load constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test saving and loading" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModels: Test model access: Model "1FGL J0005.7+3815" not found.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test GModels: Test model access: Model "2FGL J0005.7+3815" found but not expected.' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Model container is empty." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Test if 1 is 1" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Append model with same name" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Insert model with same name" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Set model with same name" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Model container is empty." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Test if 3 is 3" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Model container is empty." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Test if 2 is 2" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Model container is empty." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Test if 1 is 1" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Model container is not empty." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Test if 0 is 0" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Model container is empty." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Test if 1 is 1" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Append identical container" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Model container is empty." status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access: Test if 2 is 2" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test model access" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Setup Crab model" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test if 0.5 is within 0.5 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test if 0.5 is within 0.5 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels: Test if 1 is within 1 +/- 1e-10" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test GModels" status="" time="0.039214" />
+    <testcase assertions="" classname="GModel" name="Test model registries: Test GModelRegistry void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Model pointer for "PointSource" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Expected "PointSource" instead of "PointSource".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Model pointer for "ExtendedSource" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Expected "ExtendedSource" instead of "ExtendedSource".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Model pointer for "DiffuseSource" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Expected "DiffuseSource" instead of "DiffuseSource".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Model pointer for "CTABackground" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Expected "CTABackground" instead of "CTABackground".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Model pointer for "RadialAcceptance" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Expected "RadialAcceptance" instead of "RadialAcceptance".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Model pointer for "DRBFitting" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelRegistry model allocation: Expected "DRBFitting" instead of "DRBFitting".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test model registries: Test GModelRegistry model allocation" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test model registries: Test GModelSpatialRegistry void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Model pointer for "SkyDirFunction" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Expected "SkyDirFunction" instead of "SkyDirFunction".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Model pointer for "DiskFunction" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Expected "DiskFunction" instead of "DiskFunction".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Model pointer for "GaussFunction" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Expected "GaussFunction" instead of "GaussFunction".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Model pointer for "ShellFunction" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Expected "ShellFunction" instead of "ShellFunction".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Model pointer for "EllipticalDisk" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Expected "EllipticalDisk" instead of "EllipticalDisk".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Model pointer for "ConstantValue" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Expected "ConstantValue" instead of "ConstantValue".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Model pointer for "MapCubeFunction" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Expected "MapCubeFunction" instead of "MapCubeFunction".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Model pointer for "SpatialMap" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpatialRegistry model allocation: Expected "SpatialMap" instead of "SpatialMap".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test model registries: Test GModelSpatialRegistry model allocation" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test model registries: Test GModelSpectralRegistry void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Model pointer for "BrokenPowerLaw" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Expected "BrokenPowerLaw" instead of "BrokenPowerLaw".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Model pointer for "ConstantValue" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Expected "ConstantValue" instead of "ConstantValue".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Model pointer for "ExpCutoff" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Expected "ExpCutoff" instead of "ExpCutoff".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Model pointer for "FileFunction" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Expected "FileFunction" instead of "FileFunction".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Model pointer for "Gaussian" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Expected "Gaussian" instead of "Gaussian".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Model pointer for "LogParabola" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Expected "LogParabola" instead of "LogParabola".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Model pointer for "NodeFunction" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Expected "NodeFunction" instead of "NodeFunction".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Model pointer for "PowerLaw" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Expected "PowerLaw" instead of "PowerLaw".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Model pointer for "PowerLaw2" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelSpectralRegistry model allocation: Expected "PowerLaw2" instead of "PowerLaw2".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test model registries: Test GModelSpectralRegistry model allocation" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test model registries: Test GModelTemporalRegistry void constructor" status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelTemporalRegistry model allocation: Model pointer for "Constant" is NULL' status="" time="0" />
+    <testcase assertions="" classname="GModel" name='Test model registries: Test GModelTemporalRegistry model allocation: Expected "Constant" instead of "Constant".' status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test model registries: Test GModelTemporalRegistry model allocation" status="" time="0" />
+    <testcase assertions="" classname="GModel" name="Test model registries" status="" time="0.000140888" />
+  </testsuite>
+</testsuites>
