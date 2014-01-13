@@ -45,7 +45,7 @@ const GModelSpectralRegistry g_spectral_gauss_registry(&g_spectral_gauss_seed);
 /* __ Method name definitions ____________________________________________ */
 #define G_FLUX                "GModelSpectralGauss::flux(GEnergy&, GEnergy&)"
 #define G_EFLUX              "GModelSpectralGauss::eflux(GEnergy&, GEnergy&)"
-#define G_MC     "GModelSpectralGauss::mc(GEnergy&, GEnergy&, GTime&, GRan&)"
+#define G_MC             "GModelSpectralGauss::mc(GEnergy&, GEnergy&, GRan&)"
 #define G_READ                      "GModelSpectralGauss::read(GXmlElement&)"
 #define G_WRITE                    "GModelSpectralGauss::write(GXmlElement&)"
 
@@ -297,18 +297,28 @@ double GModelSpectralGauss::eval_gradients(const GEnergy& srcEng,
  * - \f$S_{\rm E}(E | t)\f$ is the spectral model (ph/cm2/s/MeV).
  * The integration is done analytically.
  ***************************************************************************/
+
 double GModelSpectralGauss::flux(const GEnergy& emin,
-                                 const GEnergy& emax) const
-{
-    // **TODO: implement as in Gaussian::integral from Gaussian.cxx in the Fermi ScienceTools - can't locate this file...
-    // Initialise flux
+                                 const GEnergy& emax) const{
+
+    double energy_min = emin.MeV();
+    double energy_max = emax.MeV();
+
+
+	double norm = m_norm.value();
+    double mean = m_mean.value();
+    double sigma = m_sigma.value();
+
+	double zmin = (energy_min - mean)/sqrt(2.)/sigma;
+	double zmax = (energy_max - mean)/sqrt(2.)/sigma;
+
     double flux = 0.0;
     
     // Compute only if integration range is valid
     if (emin < emax) {
 
         // Compute flux for a constant model
-        flux = m_norm.value() * (emax.MeV() - emin.MeV());
+        flux = norm*(gammalib::erfcc(zmin) - gammalib::erfcc(zmax))/2.;
     
     } // endif: integration range was valid
 
@@ -380,30 +390,50 @@ double GModelSpectralGauss::eflux(const GEnergy& emin,
  *
  * Returns Monte Carlo energy by randomly drawing from a constant between
  * the minimum and maximum photon energy.
+ *
+ * Method Used: Box-Muller transform, outlined here:
+ * http://en.wikipedia.org/wiki/Box%E2%80%93Muller_transform
+ *
+ * Code from: http://www.design.caltech.edu/erik/Misc/Gaussian.html
  ***************************************************************************/
 GEnergy GModelSpectralGauss::mc(const GEnergy& emin,
                                 const GEnergy& emax,
-                                const GTime&   time,
                                 GRan&          ran) const
 {
+	double xmax = emax.MeV();
+	double xmin = emin.MeV();
+	double energy;
+
+
     // Throw an exception if energy range is invalid
-    if (emin >= emax) {
-        throw GException::erange_invalid(G_MC, emin.MeV(), emax.MeV(),
+    if (xmin >= xmax) {
+        throw GException::erange_invalid(G_MC, xmin, xmax,
               "Minimum energy < maximum energy required.");
     }
 
-    // TODO: implement
-    // Allocate energy
-    GEnergy energy;
-
     // Get uniform value between 0 and 1
     double u = ran.uniform();
+    float x1, x2, w;
 
-    // Map into [emin,emax] range
-    energy.MeV((emax.MeV() - emin.MeV()) * u + emin.MeV());
+    do {
+    	do{
+    		x1 = 2.0 * u - 1.0;
+    		x2 = 2.0 * u - 1.0;
+    		w = x1 * x1 + x2 * x2;
+    	} while (w >= 1.0);
+
+        w = sqrt( (-2.0 * log( w ) ) / w );
+
+    	double val = x1 * w;
+
+    	// Map into [emin,emax] range
+
+    	energy = (xmax - xmin) * val + xmin;
+
+    } while ((xmin <= energy) && (energy < xmax));
 
     // Return energy
-    return energy;
+    return GEnergy(energy, "MeV");
 }
 
 
@@ -482,59 +512,80 @@ void GModelSpectralGauss::read(const GXmlElement& xml)
  * @param[in] xml XML element into which model information is written.
  *
  * @exception GException::model_invalid_spectral
- *            Existing XML element is not of type "ConstantValue"
+ *            Existing XML element is not of type "Gaussian"
  * @exception GException::model_invalid_parnum
  *            Invalid number of model parameters or nodes found in XML element.
  * @exception GException::model_invalid_parnames
  *            Invalid model parameter names found in XML element.
  *
- * Writes the spectral information into an XML element with the format
+ * Writes the spectral information into an XML element. The format of the XML
+ * element is
  *
- *     <spectrum type="ConstantValue">
- *       <parameter name="Value" scale="1" min="0" max="1000" value="1" free="1"/>
+ *     <spectrum type="Gaussian">
+ *       <parameter name="Prefactor" scale=".." value=".." min=".." max=".." free=".."/>
+ *       <parameter name="Mean"     scale=".." value=".." min=".." max=".." free=".."/>
+ *       <parameter name="Sigma"    scale=".." value=".." min=".." max=".." free=".."/>
  *     </spectrum>
  ***************************************************************************/
 void GModelSpectralGauss::write(GXmlElement& xml) const
 {
-    // **TODO: implement as in GModelSpectralExpPlaw::write
-
     // Set model type
     if (xml.attribute("type") == "") {
-        xml.attribute("type", "ConstantValue");
+        xml.attribute("type", "Gaussian");
     }
 
     // Verify model type
-    if (xml.attribute("type") != "ConstantValue") {
+    if (xml.attribute("type") != "Gaussian") {
         throw GException::model_invalid_spectral(G_WRITE, xml.attribute("type"),
-              "Spectral model is not of type \"ConstantValue\".");
+              "Spectral model is not of type \"Gaussian\".");
     }
 
-    // If XML element has 0 nodes then append parameter node. The name
-    // of the node is "Value" as this is the Fermi-LAT standard.
-    // We thus assure that the XML files will be compatible with
-    // Fermi-LAT.
+    // If XML element has 0 nodes then append 3 parameter nodes
     if (xml.elements() == 0) {
-        xml.append(GXmlElement("parameter name=\"Value\""));
+        xml.append(GXmlElement("parameter name=\"Prefactor\""));
+        xml.append(GXmlElement("parameter name=\"Mean\""));
+        xml.append(GXmlElement("parameter name=\"Sigma\""));
     }
 
-    // Verify that XML element has exactly 1 parameter
-    if (xml.elements() != 1 || xml.elements("parameter") != 1) {
+    // Verify that XML element has exactly 3 parameters
+    if (xml.elements() != 3 || xml.elements("parameter") != 3) {
         throw GException::model_invalid_parnum(G_WRITE, xml,
-              "Spectral constant requires exactly 1 parameter.");
+              "Power law model requires exactly 3 parameters.");
     }
 
-    // Get parameter element
-    GXmlElement* par = xml.element("parameter", 0);
+    // Set or update model parameter attributes
+    int npar[] = {0, 0, 0};
+    for (int i = 0; i < 3; ++i) {
 
-    // Set parameter
-    if (par->attribute("name") == "Normalization" ||
-        par->attribute("name") == "Value") {
-        m_norm.write(*par);
-    }
-    else {
+        // Get parameter element
+        GXmlElement* par = xml.element("parameter", i);
+
+        // Handle prefactor
+        if (par->attribute("name") == "Prefactor") {
+            npar[0]++;
+            m_norm.write(*par);
+        }
+
+        // Handle mean
+        else if (par->attribute("name") == "Mean") {
+            npar[1]++;
+            m_mean.write(*par);
+        }
+
+        // Handle sigma
+        else if (par->attribute("name") == "Sigma") {
+            npar[2]++;
+            m_sigma.write(*par);
+        }
+
+
+    } // endfor: looped over all parameters
+
+    // Check of all required parameters are present
+    if (npar[0] != 1 || npar[1] != 1 || npar[2] != 1 ) {
         throw GException::model_invalid_parnames(G_WRITE, xml,
-                          "Spectral constant requires either"
-                          " \"Normalization\" or \"Value\" parameter.");
+              "Require \"Prefactor\", \"Mean\" and \"Sigma\""
+              " parameters.");
     }
 
     // Return

@@ -91,7 +91,7 @@ public:
     virtual double          eflux(const GEnergy& emin,
                                   const GEnergy& emax) const = 0;
     virtual GEnergy         mc(const GEnergy& emin, const GEnergy& emax,
-                               const GTime& time, GRan& ran) const = 0;
+                               	   GRan& ran) const = 0;
     virtual void            read(const GXmlElement& xml) = 0;
     virtual void            write(GXmlElement& xml) const = 0;
     virtual std::string     print(const GChatter& chatter = NORMAL) const = 0;
